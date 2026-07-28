@@ -7,6 +7,12 @@ the database is updated and the number changes on screen **without reloading the
 
 Built with **HTML, CSS, JavaScript, PHP and MySQL**. No frameworks.
 
+## Live version
+
+Hosted on InfinityFree:
+
+**https://mansour-tasks.ifree.page/**
+
 ---
 
 ## How it works
