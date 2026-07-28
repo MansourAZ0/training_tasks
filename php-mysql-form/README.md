@@ -36,7 +36,8 @@ never reloads — which is exactly what requirement 6 asks for.
 | File | What it does |
 |------|--------------|
 | `index.php` | The page. Reads every row from MySQL and prints the form + table. |
-| `db.php` | Opens the database connection (PDO). Every other PHP file includes it. |
+| `db.example.php` | Template for the connection settings. Copy it to `db.php` and fill it in. |
+| `db.php` | The real connection (PDO). **Not in git** — it holds the password. |
 | `add.php` | Receives the form, validates it, runs the `INSERT`, replies with JSON. |
 | `toggle.php` | Receives an id, flips that row's status, replies with the new value. |
 | `script.js` | Sends both requests with `fetch()` and updates the page in place. |
@@ -119,14 +120,21 @@ That way rows added after the page loaded get the behaviour too, for free.
    values it gives you: **hostname**, **database name**, **username**, **password**.
 3. Open **phpMyAdmin** for that database, go to the **SQL** tab, paste the contents of
    `schema.sql`, and run it.
-4. Put those four values into the top of `db.php`.
+4. Copy `db.example.php` to `db.php` and put those four values into it:
+   ```bash
+   cp db.example.php db.php
+   ```
 5. Upload `index.php`, `db.php`, `add.php`, `toggle.php`, `script.js` and `style.css`
    into the **`htdocs`** folder — either with the online File Manager or over FTP
    (FileZilla). Delete the default `index2.html` InfinityFree puts there.
+   (`db.example.php` doesn't need to be uploaded.)
 6. Open your site. New accounts can take a few minutes before the domain works.
 
-> **Note:** the `db.php` in this repo has placeholder values, not my real password.
-> Never commit real database credentials to GitHub.
+> **Why the two files?** `db.php` is the only file holding a password, so it's listed
+> in `.gitignore` and never reaches GitHub. `db.example.php` is the placeholder version
+> that *is* committed, so anyone reading the repo can see what settings are needed
+> without seeing my credentials. This is the standard way to handle secrets in a
+> public repository.
 
 ## Running it on your own computer
 
