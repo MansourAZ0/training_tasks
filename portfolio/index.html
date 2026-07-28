@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mansour Alanazi — Computer Engineering Student</title>
+  <meta name="description" content="Portfolio of Mansour Alanazi, a computer engineering student who writes software for fun.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">mansour<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="theme-icon">◐</span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero">
+      <p class="kicker">// hello, world</p>
+      <h1>
+        I'm <span class="accent">Mansour Alanazi</span>.<br>
+        I build things with code.
+      </h1>
+      <p class="lead">
+        22 years old. Computer engineering student.
+        I write software for fun — not because someone assigned it.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">~/mansour</span>
+        </div>
+        <pre class="terminal-body"><code><span class="prompt">$</span> whoami
+mansour_alanazi
+
+<span class="prompt">$</span> cat about.txt
+role   : computer engineering student
+age    : 22
+status : building something right now
+
+<span class="prompt">$</span> <span class="typed" id="typed"></span><span class="cursor">▊</span></code></pre>
+      </div>
+    </section>
+
+    <!-- ---------- ABOUT ---------- -->
+    <section id="about" class="section reveal">
+      <h2><span class="num">01.</span> About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a computer engineering student who ended up loving the software side more
+            than anything else. Somewhere between a logic gate and a for-loop, I picked a side.
+          </p>
+          <p>
+            Most of what I know came from curiosity rather than a syllabus: opening the editor
+            at midnight, breaking something, fixing it, and learning why it broke.
+            I like clean code, small tools that do one thing well, and understanding what's
+            happening a layer below where I'm working.
+          </p>
+          <p>
+            Right now I'm in a summer training internship, sharpening the fundamentals and
+            shipping more than I read about shipping.
+          </p>
+        </div>
+        <ul class="facts">
+          <li><span class="fact-key">Name</span><span class="fact-val">Mansour Alanazi</span></li>
+          <li><span class="fact-key">Age</span><span class="fact-val">22</span></li>
+          <li><span class="fact-key">Field</span><span class="fact-val">Computer Engineering</span></li>
+          <li><span class="fact-key">Writes code</span><span class="fact-val">For fun</span></li>
+          <li><span class="fact-key">Status</span><span class="fact-val"><span class="pulse"></span>Open to learn</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section id="skills" class="section reveal">
+      <h2><span class="num">02.</span> What I work with</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">&lt;/&gt;</div>
+          <h3>Languages</h3>
+          <p>The tools I reach for when I want to make an idea real.</p>
+          <div class="tags">
+            <span>C</span><span>C++</span><span>Python</span><span>Java</span><span>JavaScript</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">▤</div>
+          <h3>Web</h3>
+          <p>Turning a blank page into something people can actually use.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>Responsive design</span><span>DOM</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">⚙</div>
+          <h3>Engineering</h3>
+          <p>The part of the degree that keeps the fun part honest.</p>
+          <div class="tags">
+            <span>Data structures</span><span>Algorithms</span><span>OOP</span><span>Logic design</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">⌘</div>
+          <h3>Tools</h3>
+          <p>The daily setup — the boring stuff that saves hours.</p>
+          <div class="tags">
+            <span>Git</span><span>GitHub</span><span>VS Code</span><span>Terminal</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section id="projects" class="section reveal">
+      <h2><span class="num">03.</span> Things I've built</h2>
+      <p class="section-note">A few of the projects I write for fun. More on my GitHub.</p>
+      <div class="projects">
+
+        <article class="project">
+          <header>
+            <span class="project-tag">Web</span>
+            <h3>This portfolio</h3>
+          </header>
+          <p>
+            A single-page personal site built from scratch with plain HTML and CSS — no
+            frameworks, no build step. Dark/light theme, responsive down to a phone screen,
+            and a terminal that types on its own.
+          </p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+
+        <article class="project">
+          <header>
+            <span class="project-tag">CLI</span>
+            <h3>Small terminal tools</h3>
+          </header>
+          <p>
+            Little command-line utilities I write when a task annoys me twice. Nothing
+            fancy — but each one taught me something about files, arguments, or how a
+            program should fail politely.
+          </p>
+          <div class="tags"><span>Python</span><span>Bash</span></div>
+        </article>
+
+        <article class="project">
+          <header>
+            <span class="project-tag">Course work</span>
+            <h3>University projects</h3>
+          </header>
+          <p>
+            Data structures, algorithms and OOP assignments taken further than required —
+            usually because I got curious about the "what if I made it faster" version.
+          </p>
+          <div class="tags"><span>C++</span><span>Java</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section id="contact" class="section reveal">
+      <h2><span class="num">04.</span> Say hello</h2>
+      <p class="section-note">
+        Got a project, a question, or just want to talk about code? My inbox is open.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:mansourprivate13531@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://github.com/MansourAZ0" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; built by Mansour Alanazi — <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
