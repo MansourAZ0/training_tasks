@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A web control pad for the training robot.">
+  <title>Robot control pad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Web track · week 5</p>
+      <h1 id="page-title">Robot control pad</h1>
+      <p class="intro">Send a movement command to the robot and see the value currently stored in MySQL.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="controls-title">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Live controls</p>
+          <h2 id="controls-title">Choose a direction</h2>
+        </div>
+        <span id="connection" class="connection" data-state="loading">Connecting…</span>
+      </div>
+
+      <div class="control-pad" aria-label="Robot movement controls">
+        <button class="control control-forward" type="button" data-command="forward" aria-label="Move forward">↑<span>Forward</span></button>
+        <button class="control control-left" type="button" data-command="left" aria-label="Turn left">←<span>Left</span></button>
+        <button class="control control-stop" type="button" data-command="stop" aria-label="Stop the robot">■<span>Stop</span></button>
+        <button class="control control-right" type="button" data-command="right" aria-label="Turn right">→<span>Right</span></button>
+        <button class="control control-backward" type="button" data-command="backward" aria-label="Move backward">↓<span>Backward</span></button>
+      </div>
+
+      <div class="status-row" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="status">Loading the current command…</span>
+      </div>
+    </section>
+
+    <section class="legend" aria-label="Stored command mapping">
+      <span><b>f</b> forward</span>
+      <span><b>b</b> backward</span>
+      <span><b>l</b> left</span>
+      <span><b>r</b> right</span>
+      <span><b>S</b> stop</span>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

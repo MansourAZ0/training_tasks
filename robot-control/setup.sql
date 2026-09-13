@@ -1,0 +1,7 @@
+CREATE TABLE robot_state (
+    id INT PRIMARY KEY,
+    command CHAR(1) NOT NULL,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO robot_state (id, command) VALUES (1, 'S');

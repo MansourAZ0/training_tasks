@@ -11,6 +11,7 @@
 
 # real database credentials — never commit these
 php-mysql-form/db.php
+robot-control/db.php
 
 # editor / tool backups (can contain copies of the above)
 *.bak
